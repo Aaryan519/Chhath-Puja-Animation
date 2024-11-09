@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Chhath Puja</title>
+    <style>
+        /* Basic Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a2e;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        /* Glowing Text Animation */
+        
+        .glow-text {
+            color: #ffde59;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59, 0 0 30px #ff9f43, 0 0 40px #ff9f43, 0 0 50px #ff6b6b, 0 0 60px #ff6b6b;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59, 0 0 30px #ff9f43, 0 0 40px #ff9f43, 0 0 50px #ff6b6b, 0 0 60px #ff6b6b;
+            }
+            to {
+                text-shadow: 0 0 20px #ffde59, 0 0 30px #ffde59, 0 0 40px #ff9f43, 0 0 50px #ff9f43, 0 0 60px #ff6b6b, 0 0 70px #ff6b6b;
+            }
+        }
+        /* Sun Animation */
+        
+        .sun {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            background: radial-gradient(circle, #ff9f43, #ff6b6b);
+            border-radius: 50%;
+            animation: rise 5s ease-in-out infinite;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: 0;
+                opacity: 0;
+            }
+            50% {
+                bottom: 50%;
+                opacity: 1;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glow-text">Happy Chhath Puja</div>
+    <div class="sun"></div>
+
+</body>
+
+</html>
